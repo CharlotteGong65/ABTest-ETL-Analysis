@@ -24,15 +24,15 @@ cp .env.example .env
 
 1. **8:35 AM UTC** - Cron job triggers
 2. Script extracts **yesterday's data** from all 9 regions:
-   - UK (Site ID: 3)
-   - US (Site ID: 6)
-   - FR (Site ID: 15)
-   - ES (Site ID: 12)
-   - IT (Site ID: 18)
-   - DE (Site ID: 9)
-   - NL (Site ID: 21)
-   - IN (Site ID: 38)
-   - AE (Site ID: 35)
+   - UK
+   - US
+   - FR
+   - ES
+   - IT
+   - DE
+   - NL
+   - IN 
+   - AE
 3. Data is automatically pushed to BigQuery table (configured in `.env`)
 4. Backup CSV file is created with timestamp
 5. Old CSV backups (>7 days) are automatically deleted
@@ -166,13 +166,6 @@ All dependencies are installed in the virtual environment:
 - google-auth
 - pyarrow
 
-To reinstall:
-```bash
-cd /home/avanish.meedimale/matomo_ABTest
-source env/bin/activate
-pip install -r requirements.txt
-```
-
 ## Monitoring
 
 ### Success Indicators
@@ -195,3 +188,4 @@ For issues or questions:
 1. Check the log files in the project directory
 2. Review README.md for detailed documentation
 3. Test manually with `./run_daily.sh`
+
