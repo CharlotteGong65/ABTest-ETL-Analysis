@@ -1,0 +1,10 @@
+requests
+pandas
+tqdm
+google-cloud-bigquery
+google-auth
+pyarrow
+numpy
+python-dotenv
+scipy
+statsmodels
