@@ -16,7 +16,7 @@ This project provides an end-to-end pipeline for A/B test analysis:
 - ✅ Extracts A/B test experiment assignments for all visitors
 - ✅ Links order numbers to specific test variations
 - ✅ **Automatically pushes data to BigQuery**
-- ✅ Processes multiple regions/sites (UK, US, FR, ES, IT, DE, NL, IN, AE)
+- ✅ Processes multiple regions/sites 
 - ✅ Supports date range queries
 - ✅ Creates backup CSV files
 - ✅ Automated daily extraction via cron
@@ -94,7 +94,7 @@ start_date = end_date - timedelta(days=7)  # Last 7 days
 sites_to_process = SITE_COUNTRY_MAP
 
 # Or specific regions:
-sites_to_process = {18: "IT", 3: "UK"}
+sites_to_process = {}
 ```
 
 ### Testing Mode
@@ -174,15 +174,6 @@ Check `matomoABTestDataExtract.log` for detailed execution logs.
 
 ```python
 SITE_COUNTRY_MAP = {
-    3: "UK",
-    6: "US",
-    15: "FR",
-    12: "ES",
-    18: "IT",
-    9: "DE",
-    21: "NL",
-    38: "IN",
-    35: "AE"
 }
 ```
 
@@ -318,3 +309,4 @@ Matomo_abtest/
 - Progress bars show real-time extraction status
 - A/B test data is stored in the `experiments` field of each Matomo visit
 - Statistical tests use α=0.05 (95% confidence) by default
+
